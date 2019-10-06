@@ -21,6 +21,7 @@ expect('some value / selector').matcher('value / ')
 - .toHaveAnInstanceOf(Instance)
 - .toContain('string')
 - .toBeTruthy()
+- .toHaveBeenCalledWith(args)
 - .toEqual(value) - to compare recursively all properties of object instances
 - .toBe(value) - to compare primitive values or to check referential identity of object instances, do not use for float numbers
 - jest.spyOn(object, methodName) - Creates a mock function similar to jest.fn but also tracks calls to object[methodName]. Returns a Jest mock function.
@@ -43,5 +44,6 @@ expect('some value / selector').matcher('value / ')
 
 - .find(Instance/selector) => []
 - .prop(key) => Any
+- .props() => {}
 - .simulate('event', {})
 - .update()
