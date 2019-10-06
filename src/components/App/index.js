@@ -12,23 +12,21 @@ class App extends Component {
 		mainColor: "blue",
 		lifeCycle: "",
 	};
-	handleStrings(str) {
+	handleStrings = str => {
 		if (str === "Hello World") return true;
 		return false;
-	}
+	};
 	componentDidMount() {
 		this.setState({ lifeCycle: "componentDidMount" });
 	}
-	componentWillReceiveProps() {
-		this.setState({ lifeCycle: "componentWillReceiveProps" });
-	}
 	render() {
+		const { mainColor, on, input, lifeCycle } = this.state;
 		return (
 			<div className="App">
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to React</h1>
-					<h3 className={this.state.mainColor}>Everyone is Welcome!</h3>
+					<h3 className={mainColor}>Everyone is Welcome!</h3>
 				</header>
 
 				<div className="App-container">
@@ -36,11 +34,11 @@ class App extends Component {
 
 					<div className="App-block">
 						<p className="App-intro">Hello World</p>
-						<p className="button-state">{this.state.on ? "Yes!" : "No!"}</p>
+						<p className="button-state">{on ? "Yes!" : "No!"}</p>
 						<button onClick={() => this.setState({ on: true })}>Click</button>
-						<h2>{this.state.input}</h2>
+						<h2>{input}</h2>
 						<input onChange={e => this.setState({ input: e.currentTarget.value })} type="text" />
-						<p className="lifeCycle">{this.state.lifeCycle}</p>
+						<p className="lifeCycle">{lifeCycle}</p>
 					</div>
 				</div>
 			</div>
