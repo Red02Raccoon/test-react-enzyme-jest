@@ -11,6 +11,21 @@ input {
 	border-radius: 10px;
 	padding: 7px;
 }
+[data-testid="checked"] {
+	position: relative;
+	cursor: pointer;
+}
+[data-testid="checked"]:before {
+	content: "";
+	display: block;
+	width: 45px;
+	height: 45px;
+	border: 1px solid red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 button {
 	background: #0f4fff;
 	border: none;
@@ -32,6 +47,6 @@ h2 {
 }
 .promotions {
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 20px;
 	color: #fff;
 }
