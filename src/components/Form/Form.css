@@ -50,3 +50,23 @@ h2 {
 	margin-left: 20px;
 	color: #fff;
 }
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+label[data-testid="label"] {
+	width: 45px;
+	height: 45px;
+	border: 1px solid green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+label[data-testid="label"] input {
+	margin: 0;
+}

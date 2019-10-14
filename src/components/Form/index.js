@@ -45,7 +45,7 @@ export default class Form extends Component {
 					placeholder="Number"
 					value={this.state.number}
 				/>
-				<div>
+				<div className="row">
 					<input
 						data-testid="checked"
 						type="checkbox"
@@ -53,6 +53,21 @@ export default class Form extends Component {
 						onChange={() => {}}
 						onClick={this.handlePromotionClick}
 					/>
+					<p data-testid="promotionsP" className="promotions">
+						Receive Promotions
+					</p>
+				</div>
+				<div className="row">
+					<label data-testid="label" htmlFor="check">
+						<input
+							id="check"
+							data-testid="checked_2"
+							type="checkbox"
+							checked={this.state.optIn}
+							onChange={() => {}}
+							onClick={this.handlePromotionClick}
+						/>
+					</label>
 					<p data-testid="promotionsP" className="promotions">
 						Receive Promotions
 					</p>
