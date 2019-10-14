@@ -3,6 +3,7 @@ import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
 import App, { Link } from "./";
+import Form from "../Form";
 
 describe("<App /> shallow rendering", () => {
 	let wrapper;
@@ -12,6 +13,22 @@ describe("<App /> shallow rendering", () => {
 
 	it("h1 contains correct text", () => {
 		expect(wrapper.find("h1").text()).toBe("Welcome to React");
+	});
+	it("form children like node", () => {
+		console.log(wrapper.debug());
+		expect(wrapper.find("input[data-testid='email']").length).toBe(1);
+	});
+	it("form children like element", () => {
+		expect(wrapper.find(Form).length).toBe(1);
+	});
+	it("form children use dive()", () => {
+		expect(wrapper.find(Form).length).toBe(1);
+		expect(
+			wrapper
+				.find(Form)
+				.dive()
+				.find("input[data-testid='email']").length
+		).toBe(1);
 	});
 	it("matches the snapshot", () => {
 		expect(toJson(wrapper)).toMatchSnapshot();

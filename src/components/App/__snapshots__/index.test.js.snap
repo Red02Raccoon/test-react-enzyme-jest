@@ -56,7 +56,9 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
             type="text"
             value=""
           />
-          <div>
+          <div
+            className="row"
+          >
             <input
               checked={true}
               data-testid="checked"
@@ -64,6 +66,29 @@ exports[`<App /> mount rendering matches the snapshot 1`] = `
               onClick={[Function]}
               type="checkbox"
             />
+            <p
+              className="promotions"
+              data-testid="promotionsP"
+            >
+              Receive Promotions
+            </p>
+          </div>
+          <div
+            className="row"
+          >
+            <label
+              data-testid="label"
+              htmlFor="check"
+            >
+              <input
+                checked={true}
+                data-testid="checked_2"
+                id="check"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+            </label>
             <p
               className="promotions"
               data-testid="promotionsP"
