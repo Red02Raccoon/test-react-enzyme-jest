@@ -26,6 +26,19 @@ it('description', () => {
 expect('some value / selector').matcher('value / ')
 ```
 
+### Main tests goals:
+
+- easy to maintain;
+- test behavior (what app should do) not implementation (how it works)
+- easy diagnosis of falling tests
+- find balance between easy diagnosis and less brittle tests
+
+### Jest:
+
+- test runner
+- assertions
+- mock, spy
+
 ## JEST(matchers):
 
 - .toHaveAnInstanceOf(Instance)
